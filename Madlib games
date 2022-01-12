@@ -2,60 +2,64 @@ from tkinter import *
 
 root = Tk()
 root.geometry('300x300')
-root.title('DataFlair-Mad libs Generator')
-Label(root, text= 'Mad Libs Generator \n Have FUn!', font = 'arial 20 bold').pack()
-Label(root, text = 'click Any One :', font = 'arial 15 bold').place(x=40, y=80)
+root.title('Mad libs Generator')
+Label(root, text= 'TG\'s Mad Libs Generator \n Have FUn!', font = 'arial 20 bold').pack()
+Label(root, text = 'Click Any One :', font = 'arial 15 bold').place(x=40, y=80)
 
 def madlib1():
 
-    animals = input('enter a animal name: ')
-    profession = input('enter a profession name: ')
-    cloth = input('enter a piece of cloth name: ')
-    things = input('enter a thing name: ')
-    name = input('enter a name: ')
-    place = input('enter a place: ')
-    verb = input('enter a verb in ing form: ')
-    food = input('enter food name: ')
+    print("~The Photographer Madlib Game~")
+
+    animals = input('Enter a Animal Name: ')
+    profession = input('Enter a Profession Name: ')
+    cloth = input('Enter a Piece of Cloth Name: ')
+    things = input('Enter a Thing Name: ')
+    name = input('Enter a Name: ')
+    place = input('Enter a Place: ')
+    verb = input('Enter a Verb in ing Form: ')
+    food = input('Enter Food Name: ')
     print('say ' + food + ', the photographer said as the camera flashed! ' + name + ' and i had gone to ' + place +
-'to get our photos taken on my birthday. The first photo we really wanted was a picture of us dressed as ' + animals + ' pretending to be a '
-+ profession + ' . When we saw the second photo, it was exactly what i wanted. We both looked like ' + things + ' wearing ' + cloth + ' and '
+' to get our photos taken on my birthday. The first photo we really wanted was a picture of us dressed as ' + animals + ' pretending to be a '
++ profession + '. When we saw the second photo, it was exactly what i wanted. We both looked like ' + things + ' wearing ' + cloth + ' and '
 + verb + ' --exactly what i had in mind')
 
 
 def madlib2():
+    print("~The Butterfly Madlib Game~")
 
-    adjactive = input('enter adjective: ')
-    color = input('enter a color name: ')
-    thing = input('enter a thing name: ')
-    place = input('enter a place name: ')
-    person = input('enter a person name: ')
-    adjactive1 = input('enter a adjactive: ')
-    insect = input('enter a insect name: ')
-    food = input('enter a food name: ')
-    verb = input('enter a verb name: ')
+    adjactive = input('enter adjective:-->  ')
+    color = input('enter a color name:--> ')
+    thing = input('enter a thing name:==> ')
+    place = input('enter a place name ==> ')
+    person = input('enter a person name ==> ')
+    adjective1 = input('enter a adjective ==> ')
+    insect = input('enter a insect name ==> ')
+    food = input('enter a food name ==> ')
+    verb = input('enter a verb name ==> ')
 
-    print(f'Last night i dreamed i was a {adjactive}  butterfly with {color} splocthes that looked like {thing} .I flew to {place}'
-          f'with my bestfriend and {person} who was a {adjactive1} {insect}. We ate some {food} when we got there and then decided'
+    print(f'\n Last night i dreamed i was a {adjactive}  butterfly with {color} splocthes that looked like {thing}. I flew to {place}'
+          f' with my bestfriend and {person} who was a {adjective1} {insect}. We ate some {food} when we got there and then decided '
           f'to {verb} and the dream ended when i said -- let\'s {verb}. ')
 
 
 
 def madlib3():
+    print("~Apple and Apple Madlib Game~\n ")
 
-    person = input('enter person name: ')
-    color = input('enter color: ')
-    foods = input('enter food name: ')
-    adjective = input('enter a adjective name: ')
-    thing = input('enter a thing name: ')
-    place = input('enter place: ')
-    verb = input('enter verb: ')
-    adverb = input('enter adverb: ')
-    food = input('enter food name: ')
-    things = input('enter a thing name: ')
+    person = input("Enter a person's name ==> ")
+    color = input('Enter a Color ==> ')
+    foods = input('Enter a Food Name ==> ')
+    adjective = input('Enter a Adjective Name ==> ')
+    thing = input('Enter a Thing Name ==> ')
+    place = input('Enter a place ==> ')
+    verb = input('Enter Verb ==> ')
+    adverb = input('Enter Adverb ==> ')
+    food = input('Enter Food Name ==> ')
+    things = input('Enter a Thing Name ==> ')
 
-    print(f'Today we picked apple from {person}\'s Orchard. I had no idea there were so many different varieties of apples.'
-          f'I ate {color} apples straight off the tree that tested like {food} . Then there was a {adjective} apple that looked'
-          f'like a {thing} .When out bag were full, we went on a free hay rise to {place} and back. It ended at a hay pile'
+    print(f'\n Today we picked apple from {person}\'s Orchard. I had no idea there were so many different varieties of apples.'
+          f'I ate {color} apples straight off the tree that tested like {food}. Then there was a {adjective} apple that looked '
+          f'like a {thing}. When our bags were full, we went on a free hay rise to {place} and back. It ended at a hay pile '
           f'where we got to {verb} {adverb}. I can hardly wait to get home and cook with the apples. We are going to '
           f'make apple {food} and {things} pies!. ')
 
