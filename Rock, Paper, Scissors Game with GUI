@@ -1,0 +1,85 @@
+# The object of the rock-paper-scissor python project is to build a game for a single player that plays with a computer, anywhere, and anytime.
+# This project is base on the rules that:
+#
+# rock blunts scissors so rock wins
+# scissors cut the paper so scissors win
+# paper cover rock so paper wins
+
+from tkinter import *
+import random
+
+
+#Initialize Window
+
+root = Tk()
+root.geometry('400x400')
+root.resizable(0, 0)
+root.title("TG's Rock,Paper,Scissors")
+root.config(bg='seashell3')
+
+
+Label(root, text='ROCK - PAPER - SCISSORS', font='arial 20 bold', bg = 'seashell').pack()
+
+#FOr Users Choice
+#user_take is a string type variable that stores the choice that the users enters.
+
+user_take = StringVar()
+Label(root, text = 'Choose Anyone: Rock, Paper, Scissors', font='arial 15 bold', bg ='seashell').place(x = 20, y = 70)
+Entry(root, font = 'arial 15', textvariable=user_take, bg= 'antiquewhite').place(x=90, y = 130)
+
+#For Computer choice
+#random.randint() function will randomly take any number from the given number.
+comp_pick = random.randint(1, 3)
+if comp_pick == 1:
+    comp_pick = 'Rock'.upper()
+elif comp_pick == 2:
+    comp_pick = 'Paper'.upper()
+else:
+    comp_pick = 'Scissors'.upper()
+
+
+#Function to start Game
+Result = StringVar()
+
+def play():
+    user_pick = user_take.get().upper()
+    if user_pick == comp_pick:
+        Result.set('tie, you both select the same')
+    elif user_pick == 'ROCK' and comp_pick == 'PAPER':
+        Result.set('You loose, Computer select paper')
+    elif user_pick == 'ROCK' and comp_pick == 'SCISSORS':
+        Result.set('User wins, Computer picked Scissors')
+    elif user_pick == 'PAPER' and comp_pick == 'ROCK':
+        Result.set('User wins, Computer picked ROCK')
+    elif user_pick == 'PAPER' and comp_pick == 'SCISSORS':
+        Result.set('Computer wins, Computer picked Scissors')
+    elif user_pick == 'SCISSORS' and comp_pick == 'ROCK':
+        Result.set('Computer wins, Computer picked Rock')
+    elif user_pick == 'SCISSORS' and comp_pick == 'PAPER':
+        Result.set('User wins, Computer picked Paper')
+    else:
+        Result.set('Invalid Input, choose any one -- ROCK, PAPER, SCISSORS')
+
+
+def reset():
+    Result.set('')
+    user_take.set('')
+
+
+def Exit():
+    root.destroy()
+
+Entry(root, font = 'arial 10 bold', textvariable = Result,
+      bg = 'antiquewhite2', width = 50,).place(x=25, y = 250)
+
+Button(root, font = 'arial 13 bold', text = 'PLAY', padx =5,
+       bg='seashell4', command = play).place(x = 150, y = 190)
+
+Button(root, font = 'arial 13 bold', text = 'RESET', padx =5,
+       bg='seashell4', command = reset).place(x = 70, y = 310)
+
+Button(root, font = 'arial 13 bold', text = 'EXIT', padx =5,
+       bg='seashell4', command = Exit).place(x = 230, y = 310)
+
+
+root.mainloop()
